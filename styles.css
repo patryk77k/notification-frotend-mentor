@@ -9,16 +9,34 @@ body {
   align-items: center;
 }
 .container {
-  width: 60vw;
+  width: 1440px;
   border: 1px black solid;
   margin: 80px;
+  padding: 15px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  margin: 20px 20px;
 }
 
 .user {
   display: flex;
+  margin: 30px 20px;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+}
+.input__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+
+.marked {
+  background-color: aliceblue;
 }
