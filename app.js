@@ -1,22 +1,26 @@
 const notifications = document.querySelector(".notifications");
-const user = document.querySelectorAll(".user");
+const users = document.querySelectorAll(".user");
+let score = document.querySelector(".score");
+const unread = document.querySelectorAll(".unread");
+const markAll = document.querySelector(".mark__all");
 
-let score = 0;
-const users = Array.from(user);
-console.log(users);
+score.textContent = unread.length;
 
 users.forEach((user) => {
   user.addEventListener("click", (e) => {
     e.preventDefault();
-    user.classList.toggle("marked");
-    score++;
-    notifications.innerHTML = score;
+    user.classList.remove("unread");
 
-    // user.addEventListener("click", (e) => {
-    //   e.preventDefault();
-    //   e.target.classList.remove("marked");
-    //   score--;
-    //   notifications.innerHTML = score;
-    // });
+    const newUnread = document.querySelectorAll(".unread");
+    score.textContent = newUnread.length;
+  });
+});
+
+markAll.addEventListener("click", (e) => {
+  e.preventDefault();
+  unread.forEach((unrea) => {
+    unrea.classList.remove("unread");
+    newUnread = document.querySelectorAll(".unread");
+    score.textContent = newUnread.length;
   });
 });
